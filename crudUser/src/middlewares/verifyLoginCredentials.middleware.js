@@ -8,7 +8,7 @@ const verifyLoginMiddleware = (request, response, next) => {
 
   if (!user) {
     return response.status(401).json({
-      message: "Email or password invalid",
+      message: "Acesso negado. Insira credenciais de login corretamente",
     });
   }
 
@@ -16,7 +16,7 @@ const verifyLoginMiddleware = (request, response, next) => {
 
   if(!passwordMatch){
       return response.status(401).json({
-          message: "Email or password invalid"
+          message: "Acesso negado. Insira credenciais de login corretamente"
       })
   }
 
