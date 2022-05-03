@@ -1,10 +1,11 @@
 import users from "../database";
-import { userIndex } from "../middlewares/verifyIfUserExists.middleware";
+import { indexOfTheUser } from "../middlewares/verifyIfUserExists.middleware";
 
-const deleteUserService = (id) => {
-  users.splice(userIndex, 1);
+const deleteUserService = () => {
+  
+  users.splice(indexOfTheUser, 1);
 
-  return "User deleted with success";
+  return "User has been deleted";
 };
 
 export default deleteUserService;

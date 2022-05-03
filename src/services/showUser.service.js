@@ -1,8 +1,8 @@
 import users from "../database";
 
-const showUserService = (curUser) => {
+const showUserService = (currentUserEmail) => {
   const { id, createdOn, updatedOn, name, email, isAdm } = users.find(
-    (user) => user.email === curUser
+    (user) => user.email === currentUserEmail
   );
 
   return {

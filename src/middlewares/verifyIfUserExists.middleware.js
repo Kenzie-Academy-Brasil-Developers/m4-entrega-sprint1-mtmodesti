@@ -3,9 +3,9 @@ import users from "../database";
 const verifyIfUserExistsMiddleware = (req, res, next) => {
   const { id } = req.params;
 
-    const userIndex = users.findIndex((user) => user.id === id);
+    const indexOfTheUser = users.findIndex((user) => user.id === id);
 
-  if (userIndex === -1) {
+  if (indexOfTheUser === -1) {
     return res.status(404).json("user not found");
   }
 

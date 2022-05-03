@@ -9,7 +9,8 @@ const verifyAuthTokenMiddleware = (req, res, next) => {
 
   token = token.split(" ")[1];
 
-  jwt.verify(token, "8422dbd9f4d4bbc30b6b4d57605da553", (error, decoded) => {
+  jwt.verify(token, "SECRET_KEY", (error, decoded) => {
+    console.log(error + ' log do error ')
     if (error) {
       return res.status(401).json({ message: "Invalid Token." });
     }

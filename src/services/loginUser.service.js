@@ -9,10 +9,11 @@ const userLoginService = (email) => {
       email: email,
       isAdm: user.isAdm,
     },
-    "8422dbd9f4d4bbc30b6b4d57605da553",
+    "SECRET_KEY",
     {
       expiresIn: "24h",
       subject: user.id,
+
     }
   );
 
